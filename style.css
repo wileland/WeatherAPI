@@ -1,42 +1,105 @@
+/* Reset and general styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: 20px auto;
     padding: 20px;
     background-color: white;
     border-radius: 5px;
 }
 
-.search-section {
-    display: flex;
-    margin-bottom: 20px;
-}
-
 #city-search {
-    flex: 1;
+    width: 75%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 #search-btn {
-    padding: 10px 20px;
-    margin-left: 10px;
+    width: 20%;
+    padding: 10px 0;
     background-color: blue;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
 }
 
-.search-history, .current-weather, .forecast {
+#search-btn:hover {
+    background-color: darkblue;
+}
+
+.search-history h3, .forecast h3, .current-weather h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+#history-list li {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    width: 30%;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.weather-info {
+    width: 68%;
+    padding-left: 20px;
+}
+
+.current-weather {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-.current-weather p, .forecast p {
-    margin: 10px 0;
+#current-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.current-weather p {
+    margin: 0 20px;
+}
+
+#forecast-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#forecast-container div {
+    width: 18%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
